@@ -50,7 +50,7 @@ const RandomColorGenerator = () => {
   }
 
   return (
-    <div className={`w-full md:3/5 lg:w-4/5 aspect-square mx-auto border-4 border-dashed border-amber-600 flex flex-col justify-start px-4 py-2 bg-[url(./react-img.png)] bg-contain bg-center bg-no-repeat relative`}
+    <div className={`w-full md:3/5 lg:w-4/5 aspect-square mx-auto border-4 border-dashed border-amber-600 flex flex-col justify-start px-4 py-2 bg-[url(/react-img.png)] bg-contain bg-center bg-no-repeat relative`}
     >
       <div className="absolute inset-0 py-2" style={{ backgroundColor: colorStr }}>
         <div className="flex items-center justify-center gap-4">
