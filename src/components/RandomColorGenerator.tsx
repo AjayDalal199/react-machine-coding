@@ -39,12 +39,12 @@ const RandomColorGenerator = () => {
     }
   }
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  function hexa2rgba(hexa: string) {
+  function hexa2rgba(_hexa: string) {
     // TODO: implement conversion function from hexa to rgba
     return colorStr;
   }
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  function rgba2hexa(rgba: string) {
+  function rgba2hexa(_rgba: string) {
     // TODO: implement conversion function from rgba to hexa
     return colorStr;
   }
