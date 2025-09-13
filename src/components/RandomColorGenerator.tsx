@@ -2,7 +2,7 @@ import { useState } from "react"
 
 const RandomColorGenerator = () => {
   const [colorStr, setColorStr] = useState("#f464b6");
-  const [colorCode, setColorCode] = useState(-1);
+  const [colorCode, setColorCode] = useState(0);
   const CODE = ["hex", "rgb"];
 
   function getRandomColor() {
