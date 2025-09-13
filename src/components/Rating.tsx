@@ -24,7 +24,7 @@ const Rating = () => {
         <div
           className="flex justify-center align items-center gap-1 md:gap-2 w-min mx-auto"
           onMouseLeave={() => handleTempReset()}
-
+          onTouchCancel={() => handleTempReset()}
         >
           {Array.from({ length: 10 }).map((_, i) =>
             <CircleItem key={i} index={i} fillIdx={fillIndex} handleFill={handleFill} tempIdx={tempIndex} handleTempFill={handleTempFill} />
@@ -60,7 +60,6 @@ const CircleItem = ({ index, fillIdx, tempIdx, handleFill, handleTempFill }: Cir
         onClick={() => handleFill(index)}
         onMouseEnter={() => handleTempFill(index)}
         onTouchStart={() => handleTempFill(index)}
-        onTouchCancel={() => handleFill(index)}
       >
       </div>
     </div>
