@@ -24,7 +24,7 @@ export default function Accordion() {
   return (
     <div>
       {data && data.length > 0 ? (
-        <div className="flex flex-col gap-8 justify-center items-center">
+        <div className="flex flex-col gap-2 lg:gap-8 justify-center items-center">
           <button className={`py-2 px-4 rounded-lg font-semibold ${themeColor}`} onClick={() => toggleMultiSelect(!isMultiSelect)}>
             {isMultiSelect ? "Disable" : "Enable"} Mutli Select
           </button>
@@ -49,12 +49,12 @@ const Item = ({ ques, ans, id, themeColor, selectedID, handleSelect }: ItemProp)
   const isSelected = () => !!selectedID.find(currID => currID === id);
 
   return (
-    <div className="flex flex-col gap-2 w-2xl">
+    <div className="flex flex-col gap-2 w-full">
       <button className={`${themeColor} flex justify-between items-center p-4 cursor-pointer rounded-lg`} onClick={() => handleSelect(id)}>
-        <div className="font-bold text-xl">{ques}</div>
-        <div className="font-bold text-2xl">{isSelected() ? "-" : "+"}</div>
+        <div className="font-bold text-md lg:text-xl">{ques}</div>
+        <div className="font-bold text-lg lg:text-2xl">{isSelected() ? "-" : "+"}</div>
       </button>
-      <div className={`${themeColor} text-lg p-4 rounded-lg transition duration-300 ${isSelected() ? "block" : "hidden"}`}>{ans}</div>
+      <div className={`${themeColor} text-base lg:text-lg p-4 rounded-lg transition duration-300 ${isSelected() ? "block" : "hidden"}`}>{ans}</div>
     </div>
   )
 }
