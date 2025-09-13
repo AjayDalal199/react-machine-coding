@@ -1,6 +1,7 @@
 import AppLayout from "./AppLayout";
 import Accordion from "./components/Accordion";
 import BreakLine from "./components/BreakLine";
+import ImageSlider from "./components/ImageSlider";
 import RandomColorGenerator from "./components/RandomColorGenerator";
 import Rating from "./components/Rating";
 
@@ -12,6 +13,8 @@ const App = () => {
       <div><RandomColorGenerator /></div>
       <BreakLine />
       <div><Rating /></div>
+      <BreakLine />
+      <div><ImageSlider /></div>
       <BreakLine />
     </AppLayout>
   )
