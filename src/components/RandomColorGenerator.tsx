@@ -38,12 +38,12 @@ const RandomColorGenerator = () => {
       setColorStr(rgba2hexa(colorStr));
     }
   }
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   function hexa2rgba(hexa: string) {
     // TODO: implement conversion function from hexa to rgba
     return colorStr;
   }
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   function rgba2hexa(rgba: string) {
     // TODO: implement conversion function from rgba to hexa
     return colorStr;
