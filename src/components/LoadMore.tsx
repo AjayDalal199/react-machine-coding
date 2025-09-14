@@ -19,7 +19,7 @@ type LoadMoreButtonProps = {
 // url: "https://picsum.photos/v2/list"
 
 // TODO: Only new images should load, old images must not be loaded again.
-// * LoadMore
+// * LoadMore is working as required on basic level.
 
 const LoadMore = ({ url, page, limit }: LoadMoreButtonProps) => {
   const [imagesList, setImagesList] = useState([]);
@@ -29,14 +29,13 @@ const LoadMore = ({ url, page, limit }: LoadMoreButtonProps) => {
 
   function handleLoadMorePhotos() {
     if (imagesList.length < 50) {
-      setNumLimit(n => n + 10)
+      if (numLimit === 1) setNumLimit(n => n + 9);
+      else setNumLimit(n => n + 10);
     }
   }
 
   function handleReset() {
-    if (numLimit !== limit) {
-      setNumLimit(limit);
-    }
+    if (numLimit >= 0) setNumLimit(1);
   }
 
   useEffect(() => {
