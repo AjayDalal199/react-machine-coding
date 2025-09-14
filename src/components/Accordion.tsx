@@ -19,10 +19,11 @@ export default function Accordion() {
     }
   }
 
-  const themeColor = isMultiSelect ? "bg-purple-700" : "bg-green-700";
+  const themeColor = isMultiSelect ? "bg-cyan-700" : "bg-green-700";
 
   return (
-    <div>
+    <div className="flex flex-col p-2 border border-dashed border-amber-500">
+      <div>Accordion</div>
       {data && data.length > 0 ? (
         <div className="flex flex-col gap-2 lg:gap-8 justify-center items-center">
           <button className={`py-2 px-4 rounded-lg font-semibold ${themeColor}`} onClick={() => toggleMultiSelect(!isMultiSelect)}>

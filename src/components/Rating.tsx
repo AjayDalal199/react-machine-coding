@@ -19,16 +19,18 @@ const Rating = () => {
   else if (fillIndex >= 0) textIndex = fillIndex + 1;
 
   return (
-    <div className="px-4 py-2 border-2 border-dashed border-amber-200 flex flex-col md:flex-row gap-4 items-center justify-center">
+    <div className="flex flex-col items-center justify-center p-2 border border-dashed border-amber-500 gap-2">
+      <div>Star Rating</div>
+      <div className="px-4 py-2 flex flex-col md:flex-row gap-4 items-center justify-center">
       <div className="flex gap-1 md:gap-4">
         <div
           className="flex justify-center align items-center gap-1 md:gap-2 w-min mx-auto"
           onMouseLeave={() => handleTempReset()}
           onTouchCancel={() => handleTempReset()}
-        >
+          >
           {Array.from({ length: 10 }).map((_, i) =>
             <CircleItem key={i} index={i} fillIdx={fillIndex} handleFill={handleFill} tempIdx={tempIndex} handleTempFill={handleTempFill} />
-          )}
+            )}
         </div>
 
         <div>
@@ -40,6 +42,7 @@ const Rating = () => {
         onClick={() => setFillIndex(-1)}>
         RESET
       </button>
+    </div>
     </div>
   )
 }
