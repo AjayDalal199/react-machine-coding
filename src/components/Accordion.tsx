@@ -26,7 +26,7 @@ export default function Accordion() {
       <div>Accordion</div>
       {data && data.length > 0 ? (
         <div className="flex flex-col gap-2 lg:gap-8 justify-center items-center">
-          <button className={`py-2 px-4 rounded-lg font-semibold ${themeColor}`} onClick={() => toggleMultiSelect(!isMultiSelect)}>
+          <button className={`py-2 px-4 rounded-lg font-semibold ${themeColor} transition-color duration-300`} onClick={() => toggleMultiSelect(!isMultiSelect)}>
             {isMultiSelect ? "Disable" : "Enable"} Mutli Select
           </button>
           {data.map((d, i) => <Item key={i} ques={d.ques} ans={d.ans} id={d.id} selectedID={selectedID} handleSelect={handleSelect} themeColor={themeColor} />
@@ -51,11 +51,18 @@ const Item = ({ ques, ans, id, themeColor, selectedID, handleSelect }: ItemProp)
 
   return (
     <div className="flex flex-col gap-2 w-full">
-      <button className={`${themeColor} flex justify-between items-center p-4 cursor-pointer rounded-lg`} onClick={() => handleSelect(id)}>
+      <button
+        className={`${themeColor} flex justify-between items-center p-4 cursor-pointer rounded-lg transition-color`}
+        style={{ transitionDuration: `${300 + id * 500}ms` }}
+        onClick={() => handleSelect(id)}>
         <div className="font-bold text-md lg:text-xl">{ques}</div>
         <div className="font-bold text-lg lg:text-2xl">{isSelected() ? "-" : "+"}</div>
       </button>
-      <div className={`${themeColor} text-base lg:text-lg p-4 rounded-lg transition duration-300 ${isSelected() ? "block" : "hidden"}`}>{ans}</div>
+      <div
+        className={`${themeColor} transition-color text-base lg:text-lg p-4 rounded-lg ${isSelected() ? "block" : "hidden"} `}
+        style={{ transitionDuration: `${300 + id * 500}ms` }}
+      >
+        {ans}</div>
     </div>
   )
 }
