@@ -22,7 +22,7 @@ const QRCodeGen = () => {
             className="px-4 py-2 bg-amber-400 text-gray-700 rounded-md cursor-pointer"
           >Generate QR</button>
         </div>
-        <div className="bg-red-400/50 p-2 border-4 border-dashed border-red-400 rounded-md min-h-64 min-w-64 flex flex-col items-center gap-2 text-gray-900 text-lg font-semibold">
+        <div className="bg-red-400/50 p-2 border-4 border-dashed border-red-400 rounded-md min-h-64 min-w-64 flex flex-col items-center gap-2 text-gray-200 text-lg font-semibold">
           {qrValue && <QRCode value={qrValue} />}
           <span>{qrValue}</span>
         </div>
