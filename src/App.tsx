@@ -1,32 +1,39 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { lazy } from "react";
+import NavBar from "./components/NavBar";
 import AppLayout from "./AppLayout";
-import Accordion from "./components/Accordion";
-// import BreakLine from "./components/BreakLine";
-import ImageSlider from "./components/ImageSlider";
-import LoadMore from "./components/LoadMore";
-import QRCodeGen from "./components/QRCodeGen";
-import RandomColorGenerator from "./components/RandomColorGenerator";
-import Rating from "./components/Rating";
-import SwitchTheme from "./components/SwitchTheme";
-import TreeView from "./components/TreeView";
+
+const Home = lazy(() => import("./components/Home"))
+const Accordion = lazy(() => import("./components/Accordion"));
+const ImageSlider = lazy(() => import("./components/ImageSlider"));
+const LoadMore = lazy(() => import("./components/LoadMore"));
+const QRCodeGen = lazy(() => import("./components/QRCodeGen"));
+const Rating = lazy(() => import("./components/Rating"));
+const SwitchTheme = lazy(() => import("./components/SwitchTheme"));
+const TreeView = lazy(() => import("./components/TreeView"));
+const RandomColorGen = lazy(() => import("./components/RandomColorGenerator"));
+
+// url: "https://picsum.photos/v2/list"
 
 const App = () => {
   return (
-    <AppLayout>
-      <div><Accordion /></div>
-      {/* <BreakLine /> */}
-      <div><RandomColorGenerator /></div>
-      {/* <BreakLine /> */}
-      <div><Rating /></div>
-      {/* <BreakLine /> */}
-      <div><ImageSlider /></div>
-      {/* <BreakLine /> */}
-      {/* url: "https://picsum.photos/v2/list" */}
-      <div><LoadMore url="https://picsum.photos/v2/list" page={2} limit={10} /></div>
-      {/* <BreakLine /> */}
-      <div><TreeView /></div>
-      <div><QRCodeGen /></div>
-      <div><SwitchTheme /></div>
-    </AppLayout>
+    <BrowserRouter>
+      <AppLayout>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/accordion" element={<Accordion />} />
+          <Route path="/imageSlider" element={<ImageSlider />} />
+          <Route path="/loadMore" element={<LoadMore url="https://picsum.photos/v2/list" page={1} limit={10} />} />
+          <Route path="/randomColorGen" element={<RandomColorGen />} />
+          <Route path="/qrCodeGen" element={<QRCodeGen />} />
+          <Route path="/rating" element={<Rating />} />
+          <Route path="/switchTheme" element={<SwitchTheme />} />
+          <Route path="/treeView" element={<TreeView />} />
+        </Routes>
+      </AppLayout>
+
+    </BrowserRouter>
   )
 }
 
