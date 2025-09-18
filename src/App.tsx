@@ -5,6 +5,7 @@ import ImageSlider from "./components/ImageSlider";
 import LoadMore from "./components/LoadMore";
 import RandomColorGenerator from "./components/RandomColorGenerator";
 import Rating from "./components/Rating";
+import TreeView from "./components/TreeView";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       {/* url: "https://picsum.photos/v2/list" */}
       <div><LoadMore url="https://picsum.photos/v2/list" page={2} limit={10} /></div>
       {/* <BreakLine /> */}
+      <div><TreeView /></div>
     </AppLayout>
   )
 }
