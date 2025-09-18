@@ -6,7 +6,7 @@ const TreeView = () => {
   return (
     <div className="w-full h-min p-2 flex flex-col gap-2 border border-dashed border-cyan-500 items-center">
       <div>TreeView</div>
-      <div className="w-full md:min-w-1/2 h-min p-2 bg-cyan-600  flex flex-col gap-2">
+      <div className="w-full md:w-3/5 h-min p-2 bg-cyan-600  flex flex-col gap-2">
         {folderData.map((data, i) => <Parent key={i} data={data} />)}
       </div>
     </div>
