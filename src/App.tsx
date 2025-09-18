@@ -6,6 +6,7 @@ import LoadMore from "./components/LoadMore";
 import QRCodeGen from "./components/QRCodeGen";
 import RandomColorGenerator from "./components/RandomColorGenerator";
 import Rating from "./components/Rating";
+import SwitchTheme from "./components/SwitchTheme";
 import TreeView from "./components/TreeView";
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
       {/* <BreakLine /> */}
       <div><TreeView /></div>
       <div><QRCodeGen /></div>
+      <div><SwitchTheme /></div>
     </AppLayout>
   )
 }

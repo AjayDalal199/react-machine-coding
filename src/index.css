@@ -1,1 +1,14 @@
 @import "tailwindcss";
+.theme-light {
+  --color-bg: "white";
+  --color-text: "black";
+  --color-button-bg: "black";
+  --color-button-text: "white";
+}
+
+.theme-dark {
+  --color-bg: "black";
+  --color-text: "white";
+  --color-button-bg: "white";
+  --color-button-text: "black";
+}
