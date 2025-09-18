@@ -12,6 +12,7 @@ const Rating = lazy(() => import("./components/Rating"));
 const SwitchTheme = lazy(() => import("./components/SwitchTheme"));
 const TreeView = lazy(() => import("./components/TreeView"));
 const RandomColorGen = lazy(() => import("./components/RandomColorGenerator"));
+const NumberGame = lazy(() => import("./components/NumberGame"));
 
 // url: "https://picsum.photos/v2/list"
 
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/rating" element={<Rating />} />
           <Route path="/switchTheme" element={<SwitchTheme />} />
           <Route path="/treeView" element={<TreeView />} />
+          <Route path="/numberGame" element={<NumberGame />} />
         </Routes>
       </AppLayout>
 
