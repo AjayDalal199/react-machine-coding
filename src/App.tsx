@@ -3,6 +3,7 @@ import Accordion from "./components/Accordion";
 // import BreakLine from "./components/BreakLine";
 import ImageSlider from "./components/ImageSlider";
 import LoadMore from "./components/LoadMore";
+import QRCodeGen from "./components/QRCodeGen";
 import RandomColorGenerator from "./components/RandomColorGenerator";
 import Rating from "./components/Rating";
 import TreeView from "./components/TreeView";
@@ -22,6 +23,7 @@ const App = () => {
       <div><LoadMore url="https://picsum.photos/v2/list" page={2} limit={10} /></div>
       {/* <BreakLine /> */}
       <div><TreeView /></div>
+      <div><QRCodeGen /></div>
     </AppLayout>
   )
 }
